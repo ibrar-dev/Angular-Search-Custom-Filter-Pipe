@@ -1,16 +1,16 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello> -->
 <p>
 	Start editing to see some magic happen :)
 </p>
 
 <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox">
-<p></p>
+<p> </p>
 <table
-	*ngFor="let emp of studentData | searchFilter: {name: searchText, Age:searchText,  subject: searchText}; let i=index;">
+	*ngFor="let std of studentData | search: {name: searchText} ">
 	<tr>
-		<td style="width: 5%;">{{i +1}}</td>
-		<td style="width: 10%;">{{emp.name}}</td>
-		<td style="width: 5%;">{{emp.Age}}</td>
-		<td style="width: 15%;">{{emp.subject}}</td>
+		<td style="width: 5%;">{{ +1}}</td>
+		<td style="width: 10%;">{{std.name}}</td>
+		<td style="width: 5%;">{{std.Age}}</td>
+		<td style="width: 15%;">{{std.subject}}</td>
 	</tr>
 </table>
