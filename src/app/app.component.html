@@ -6,9 +6,9 @@
 <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox">
 <p> </p>
 <table
-	*ngFor="let std of studentData | search: {name: searchText} ">
+	*ngFor="let std of studentData | search: {name: searchText, subject: searchText} ">
 	<tr>
-		<td style="width: 5%;">{{ +1}}</td>
+		
 		<td style="width: 10%;">{{std.name}}</td>
 		<td style="width: 5%;">{{std.Age}}</td>
 		<td style="width: 15%;">{{std.subject}}</td>
